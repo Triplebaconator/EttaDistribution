@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+        {
+          name: 'schicherchia',
+          email: 'schicherchia@aol.com',
+          password: bcrypt.hashSync('PW12345', 8),
+          isAdmin: true,
+        },
+        {
+          name: 'John',
+          email: 'user@example.com',
+          password: bcrypt.hashSync('1234', 8),
+          isAdmin: false,
+        },
+      ],
     products:[
     {
-        _id: '1',
         name: 'Unroasted Mexican Chiapas 10lb',
         category: 'Unroasted Coffee',
         image: '/images/p1.jpg',
@@ -13,7 +28,6 @@ const data = {
         description: 'Unroasted Mexican Chiapas EP, HG 10 pound bag'
     }, 
     {
-        _id: '2',
         name: 'Unroasted Mexican Chiapas 70kg',
         category: 'Unroasted Coffee',
         image: '/images/p3.jpg',
@@ -25,7 +39,6 @@ const data = {
         description: 'Unroasted Mexican Chiapas European Preparation, High Grown'
     }, 
     {
-        _id: '3',
         name: 'Roasted Mexican Chiapas 5lb',
         category: 'Roasted Coffee',
         image: '/images/p2.jpg',
@@ -37,7 +50,6 @@ const data = {
         description: 'Roasted Mexican Chiapas EP, HG 5 pound bag'
     }, 
     {
-        _id: '4',
         name: 'Ground Mexican Chiapas 3oz, case of 24',
         category: 'Ground Coffee',
         image: '/images/p4.jpg',
